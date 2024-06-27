@@ -7,7 +7,7 @@ Welcome to the "SOLID Principles in Real Life" repository. This repository aims 
 The repository is organized into five main principles, each representing a core tenet of object-oriented design:
 
 1. **Single Responsibility Principle (SRP)**
-   - A class should have one, and only one, reason to change. This means that a class should only have one job or responsibility.
+   - The Single Responsibility Principle (SRP) is the concept that any single object in object-oriented programing (OOP) should be made for one specific function.
 
 2. **Open/Closed Principle (OCP)**
    - Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means you should be able to add new functionality without changing existing code.
