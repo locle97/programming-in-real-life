@@ -1,0 +1,208 @@
+﻿2024-06-29 15:49:22.553 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 15:49:22.609 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 15:49:39.975 ERROR Moving message '8f4b4175-78bd-4ba2-a242-b19e00917a0d' to the error queue 'error' because processing failed due to an exception:
+NServiceBus.MessageDeserializationException: An error occurred while attempting to extract logical messages from incoming physical message 8f4b4175-78bd-4ba2-a242-b19e00917a0d
+ ---> System.InvalidOperationException: Each parameter in the deserialization constructor on type 'CookCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Stream utf8Json)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObject(Stream utf8Json)
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, Type type) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 53
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, IList`1 messageTypes) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 41
+   at NServiceBus.DeserializeMessageConnector.Extract(IncomingMessage physicalMessage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 118
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 46
+   --- End of inner exception stack trace ---
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 50
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 28
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/MessageMutators/MutateTransportMessage/MutateIncomingTransportMessageBehavior.cs:line 61
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/Performance/Statistics/ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/Pipeline/Incoming/TransportReceiveToPhysicalMessageConnector.cs:line 35
+   at NServiceBus.RetryAcknowledgementBehavior.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/ServicePlatform/Retries/RetryAcknowledgementBehavior.cs:line 25
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 49
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 68
+   at NServiceBus.LearningTransportMessagePump.ProcessFile(ILearningTransportTransaction transaction, String messageId, CancellationToken messageProcessingCancellationToken) in /_/src/NServiceBus.Core/Transports/Learning/LearningTransportMessagePump.cs:line 340
+Exception details:
+	Message ID: 8f4b4175-78bd-4ba2-a242-b19e00917a0d
+	Transport message ID: 29d6d1d1-28da-4b85-b974-02d53e22a477
+	Pipeline canceled: False
+2024-06-29 15:50:49.930 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 15:50:49.987 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 15:50:58.714 ERROR Moving message '3945d72b-4092-4090-b879-b19e0091d65d' to the error queue 'error' because processing failed due to an exception:
+NServiceBus.MessageDeserializationException: An error occurred while attempting to extract logical messages from incoming physical message 3945d72b-4092-4090-b879-b19e0091d65d
+ ---> System.InvalidOperationException: Each parameter in the deserialization constructor on type 'CookCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Stream utf8Json)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObject(Stream utf8Json)
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, Type type) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 53
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, IList`1 messageTypes) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 41
+   at NServiceBus.DeserializeMessageConnector.Extract(IncomingMessage physicalMessage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 118
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 46
+   --- End of inner exception stack trace ---
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 50
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 28
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/MessageMutators/MutateTransportMessage/MutateIncomingTransportMessageBehavior.cs:line 61
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/Performance/Statistics/ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/Pipeline/Incoming/TransportReceiveToPhysicalMessageConnector.cs:line 35
+   at NServiceBus.RetryAcknowledgementBehavior.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/ServicePlatform/Retries/RetryAcknowledgementBehavior.cs:line 25
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 49
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 68
+   at NServiceBus.LearningTransportMessagePump.ProcessFile(ILearningTransportTransaction transaction, String messageId, CancellationToken messageProcessingCancellationToken) in /_/src/NServiceBus.Core/Transports/Learning/LearningTransportMessagePump.cs:line 340
+Exception details:
+	Message ID: 3945d72b-4092-4090-b879-b19e0091d65d
+	Transport message ID: 0179ef94-8dd5-4145-b4eb-018938fa762d
+	Pipeline canceled: False
+2024-06-29 15:59:24.592 ERROR Moving message 'bc33f5fd-136a-48dd-b194-b19e0094273a' to the error queue 'error' because processing failed due to an exception:
+NServiceBus.MessageDeserializationException: An error occurred while attempting to extract logical messages from incoming physical message bc33f5fd-136a-48dd-b194-b19e0094273a
+ ---> System.InvalidOperationException: Each parameter in the deserialization constructor on type 'CookCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Stream utf8Json)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObject(Stream utf8Json)
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, Type type) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 53
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, IList`1 messageTypes) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 41
+   at NServiceBus.DeserializeMessageConnector.Extract(IncomingMessage physicalMessage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 118
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 46
+   --- End of inner exception stack trace ---
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 50
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 28
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/Performance/Statistics/ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/Pipeline/Incoming/TransportReceiveToPhysicalMessageConnector.cs:line 35
+   at NServiceBus.RetryAcknowledgementBehavior.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/ServicePlatform/Retries/RetryAcknowledgementBehavior.cs:line 25
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 49
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 68
+   at NServiceBus.LearningTransportMessagePump.ProcessFile(ILearningTransportTransaction transaction, String messageId, CancellationToken messageProcessingCancellationToken) in /_/src/NServiceBus.Core/Transports/Learning/LearningTransportMessagePump.cs:line 340
+Exception details:
+	Message ID: bc33f5fd-136a-48dd-b194-b19e0094273a
+	Transport message ID: 386f71a9-4067-48ef-b557-97dd33bedad1
+	Pipeline canceled: False
+2024-06-29 16:01:16.293 ERROR Moving message 'b1095aaa-b776-40d0-ac97-b19e0094aa20' to the error queue 'error' because processing failed due to an exception:
+NServiceBus.MessageDeserializationException: An error occurred while attempting to extract logical messages from incoming physical message b1095aaa-b776-40d0-ac97-b19e0094aa20
+ ---> System.InvalidOperationException: Each parameter in the deserialization constructor on type 'CookCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Stream utf8Json)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObject(Stream utf8Json)
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, Type type) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 53
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, IList`1 messageTypes) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 41
+   at NServiceBus.DeserializeMessageConnector.Extract(IncomingMessage physicalMessage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 118
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 46
+   --- End of inner exception stack trace ---
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 50
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 28
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/Performance/Statistics/ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/Pipeline/Incoming/TransportReceiveToPhysicalMessageConnector.cs:line 35
+   at NServiceBus.RetryAcknowledgementBehavior.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/ServicePlatform/Retries/RetryAcknowledgementBehavior.cs:line 25
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 49
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 68
+   at NServiceBus.LearningTransportMessagePump.ProcessFile(ILearningTransportTransaction transaction, String messageId, CancellationToken messageProcessingCancellationToken) in /_/src/NServiceBus.Core/Transports/Learning/LearningTransportMessagePump.cs:line 340
+Exception details:
+	Message ID: b1095aaa-b776-40d0-ac97-b19e0094aa20
+	Transport message ID: 76078b4e-c968-49dc-903f-810c692c7e29
+	Pipeline canceled: False
+2024-06-29 16:01:51.809 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 16:01:51.881 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 16:02:00.062 ERROR Moving message 'a5c255ed-f549-4215-b650-b19e0094dd60' to the error queue 'error' because processing failed due to an exception:
+NServiceBus.MessageDeserializationException: An error occurred while attempting to extract logical messages from incoming physical message a5c255ed-f549-4215-b650-b19e0094dd60
+ ---> System.InvalidOperationException: Each parameter in the deserialization constructor on type 'CookCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Stream utf8Json)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObject(Stream utf8Json)
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, Type type) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 53
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, IList`1 messageTypes) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 41
+   at NServiceBus.DeserializeMessageConnector.Extract(IncomingMessage physicalMessage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 118
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 46
+   --- End of inner exception stack trace ---
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 50
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 28
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/MessageMutators/MutateTransportMessage/MutateIncomingTransportMessageBehavior.cs:line 61
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/Performance/Statistics/ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/Pipeline/Incoming/TransportReceiveToPhysicalMessageConnector.cs:line 35
+   at NServiceBus.RetryAcknowledgementBehavior.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/ServicePlatform/Retries/RetryAcknowledgementBehavior.cs:line 25
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 49
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 68
+   at NServiceBus.LearningTransportMessagePump.ProcessFile(ILearningTransportTransaction transaction, String messageId, CancellationToken messageProcessingCancellationToken) in /_/src/NServiceBus.Core/Transports/Learning/LearningTransportMessagePump.cs:line 340
+Exception details:
+	Message ID: a5c255ed-f549-4215-b650-b19e0094dd60
+	Transport message ID: 2f80c9aa-fb11-4b50-9a7c-40d800c1f96e
+	Pipeline canceled: False
+2024-06-29 16:03:45.050 ERROR Moving message 'ebee9210-2df6-4492-b9d0-b19e00955872' to the error queue 'error' because processing failed due to an exception:
+NServiceBus.MessageDeserializationException: An error occurred while attempting to extract logical messages from incoming physical message ebee9210-2df6-4492-b9d0-b19e00955872
+ ---> System.InvalidOperationException: Each parameter in the deserialization constructor on type 'CookCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Stream utf8Json)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObject(Stream utf8Json)
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, Type type) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 53
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, IList`1 messageTypes) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 41
+   at NServiceBus.DeserializeMessageConnector.Extract(IncomingMessage physicalMessage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 118
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 46
+   --- End of inner exception stack trace ---
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 50
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 28
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/Performance/Statistics/ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/Pipeline/Incoming/TransportReceiveToPhysicalMessageConnector.cs:line 35
+   at NServiceBus.RetryAcknowledgementBehavior.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/ServicePlatform/Retries/RetryAcknowledgementBehavior.cs:line 25
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 49
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 68
+   at NServiceBus.LearningTransportMessagePump.ProcessFile(ILearningTransportTransaction transaction, String messageId, CancellationToken messageProcessingCancellationToken) in /_/src/NServiceBus.Core/Transports/Learning/LearningTransportMessagePump.cs:line 340
+Exception details:
+	Message ID: ebee9210-2df6-4492-b9d0-b19e00955872
+	Transport message ID: b38a2e1b-59ac-4fb1-85ed-42b99a636c25
+	Pipeline canceled: False
+2024-06-29 16:05:36.358 ERROR Moving message 'b1f09237-96d1-4d7b-a0c2-b19e0095dae4' to the error queue 'error' because processing failed due to an exception:
+NServiceBus.MessageDeserializationException: An error occurred while attempting to extract logical messages from incoming physical message b1f09237-96d1-4d7b-a0c2-b19e0095dae4
+ ---> System.InvalidOperationException: Each parameter in the deserialization constructor on type 'CookCommand' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ConstructorParameterIncompleteBinding(Type parentType)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Stream utf8Json)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObject(Stream utf8Json)
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, Type type) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 53
+   at NServiceBus.Serializers.SystemJson.JsonMessageSerializer.Deserialize(ReadOnlyMemory`1 body, IList`1 messageTypes) in /_/src/NServiceBus.Core/Serializers/SystemJson/JsonMessageSerializer.cs:line 41
+   at NServiceBus.DeserializeMessageConnector.Extract(IncomingMessage physicalMessage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 118
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 46
+   --- End of inner exception stack trace ---
+   at NServiceBus.DeserializeMessageConnector.ExtractWithExceptionHandling(IncomingMessage message) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 50
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in /_/src/NServiceBus.Core/Pipeline/Incoming/DeserializeMessageConnector.cs:line 28
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in /_/src/NServiceBus.Core/Performance/Statistics/ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/Pipeline/Incoming/TransportReceiveToPhysicalMessageConnector.cs:line 35
+   at NServiceBus.RetryAcknowledgementBehavior.Invoke(ITransportReceiveContext context, Func`2 next) in /_/src/NServiceBus.Core/ServicePlatform/Retries/RetryAcknowledgementBehavior.cs:line 25
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 49
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext, CancellationToken cancellationToken) in /_/src/NServiceBus.Core/Pipeline/MainPipelineExecutor.cs:line 68
+   at NServiceBus.LearningTransportMessagePump.ProcessFile(ILearningTransportTransaction transaction, String messageId, CancellationToken messageProcessingCancellationToken) in /_/src/NServiceBus.Core/Transports/Learning/LearningTransportMessagePump.cs:line 340
+Exception details:
+	Message ID: b1f09237-96d1-4d7b-a0c2-b19e0095dae4
+	Transport message ID: 929c9c2e-f7a5-4dd0-aee7-9ab1c12cb115
+	Pipeline canceled: False
+2024-06-29 16:05:55.735 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 16:05:55.795 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 16:06:32.186 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 16:06:32.247 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 16:07:05.241 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 16:07:05.302 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 16:07:26.557 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 16:07:26.616 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 16:07:58.413 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.KitchenEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 16:07:58.473 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.

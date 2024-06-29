@@ -1,0 +1,5 @@
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.OrderCounterEndpoint\obj\Debug\net7.0\Restaurant.OrderCounterEndpoint.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.OrderCounterEndpoint\obj\Debug\net7.0\Restaurant.OrderCounterEndpoint.AssemblyInfoInputs.cache
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.OrderCounterEndpoint\obj\Debug\net7.0\Restaurant.OrderCounterEndpoint.AssemblyInfo.cs
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.OrderCounterEndpoint\obj\Debug\net7.0\Restaurant.OrderCounterEndpoint.csproj.CoreCompileInputs.cache
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.OrderCounterEndpoint\obj\Debug\net7.0\Restaurant.OrderCounterEndpoint.sourcelink.json

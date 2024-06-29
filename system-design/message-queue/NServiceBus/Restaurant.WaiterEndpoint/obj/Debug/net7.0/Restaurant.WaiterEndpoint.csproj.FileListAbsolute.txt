@@ -1,0 +1,6 @@
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\obj\Debug\net7.0\Restaurant.WaiterEndpoint.csproj.AssemblyReference.cache
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\obj\Debug\net7.0\Restaurant.WaiterEndpoint.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\obj\Debug\net7.0\Restaurant.WaiterEndpoint.AssemblyInfoInputs.cache
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\obj\Debug\net7.0\Restaurant.WaiterEndpoint.AssemblyInfo.cs
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\obj\Debug\net7.0\Restaurant.WaiterEndpoint.csproj.CoreCompileInputs.cache
+D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\obj\Debug\net7.0\Restaurant.WaiterEndpoint.sourcelink.json
