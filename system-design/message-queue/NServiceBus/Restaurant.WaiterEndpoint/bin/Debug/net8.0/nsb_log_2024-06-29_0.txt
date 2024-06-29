@@ -366,3 +366,11 @@ Exception details:
 2024-06-29 16:01:10.483 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
 2024-06-29 16:03:19.514 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\bin\Debug\net8.0\' with level Info
 2024-06-29 16:03:19.570 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:27:26.523 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:27:26.588 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:27:34.378 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:27:34.434 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:55:42.787 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:55:42.850 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:59:30.461 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.WaiterEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:59:30.515 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.

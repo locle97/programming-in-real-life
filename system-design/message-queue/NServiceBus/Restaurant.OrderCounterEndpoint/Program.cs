@@ -11,7 +11,7 @@ internal class Program
 
         var transport = endpointConfiguration.UseTransport<LearningTransport>();
         var routing = transport.Routing();
-        routing.RouteToEndpoint(typeof(CookCommand), "Kitchen");
+        routing.RouteToEndpoint(typeof(OrderPlaced), "Kitchen");
 
         var endpointInstance = await Endpoint.Start(endpointConfiguration);
 
@@ -21,18 +21,18 @@ internal class Program
     }
 }
 
-public class OrderHandler: IHandleMessages<OrderCommand>
+public class OrderHandler: IHandleMessages<PlaceOrder>
 {
-    public async Task Handle(OrderCommand message, IMessageHandlerContext context)
+    public async Task Handle(PlaceOrder message, IMessageHandlerContext context)
     {
-        Console.WriteLine("Received order.");
         Console.WriteLine($"Item: {message.Item}, Quantity: {message.Quantity}");
         Console.WriteLine("Checking availability...");
         await Task.Delay(1000);
 
-        Console.WriteLine("Order processed. Sent to kitchen.");
+        Console.WriteLine($"Order {message.OrderId} checked.");
 
-        CookCommand cookCommand = new CookCommand {
+        OrderPlaced orderPlaced = new OrderPlaced {
+          OrderId = message.OrderId,
           Item = message.Item,
           Quantity = message.Quantity,
           Ingredients = new List<Ingredient> { 
@@ -40,6 +40,6 @@ public class OrderHandler: IHandleMessages<OrderCommand>
             new Ingredient { Name = "Sugar", Quantity = 2 }
           }
         };
-        await context.Send(cookCommand);
+        await context.Publish(orderPlaced);
     }
 }

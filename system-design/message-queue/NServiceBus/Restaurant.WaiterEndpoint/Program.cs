@@ -10,7 +10,7 @@
 
         var transport = endpointConfiguration.UseTransport<LearningTransport>();
         var routing = transport.Routing();
-        routing.RouteToEndpoint(typeof(OrderCommand), "OrderCounter");
+        routing.RouteToEndpoint(typeof(PlaceOrder), "OrderCounter");
 
         var endpointInstance = await Endpoint.Start(endpointConfiguration);
 
@@ -30,7 +30,8 @@
           Console.Write("Enter quantity: ");
           int quan = int.Parse(Console.ReadLine());
 
-          var command = new OrderCommand(){ 
+          var command = new PlaceOrder(){ 
+            OrderId = Guid.NewGuid(),
             Item = item,
             Quantity = quan
           };

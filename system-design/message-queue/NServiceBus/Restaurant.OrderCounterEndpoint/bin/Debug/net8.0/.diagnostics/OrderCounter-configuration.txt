@@ -1236,7 +1236,7 @@
     "ProcessorCount": 12,
     "Is64BitProcess": true,
     "CLRVersion": "8.0.6",
-    "WorkingSet": 41799680,
+    "WorkingSet": 41803776,
     "SystemPageSize": 4096,
     "HostName": "RubberDuck",
     "UserName": "lpl21",
@@ -1262,7 +1262,7 @@
     ],
     "NumberOfMessagesFoundAtStartup": 1,
     "Messages": [
-      "OrderCommand"
+      "PlaceOrder"
     ]
   },
   "Receiving": {
@@ -1282,7 +1282,7 @@
       
     ],
     "MessageHandlers": {
-      "OrderCommand": [
+      "PlaceOrder": [
         "OrderHandler"
       ]
     }

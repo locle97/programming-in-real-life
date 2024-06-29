@@ -1236,7 +1236,7 @@
     "ProcessorCount": 12,
     "Is64BitProcess": true,
     "CLRVersion": "8.0.6",
-    "WorkingSet": 40034304,
+    "WorkingSet": 40030208,
     "SystemPageSize": 4096,
     "HostName": "RubberDuck",
     "UserName": "lpl21",

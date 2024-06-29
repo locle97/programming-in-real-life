@@ -1,0 +1,12 @@
+﻿2024-06-29 18:42:36.773 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.StorageEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:42:36.835 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:42:40.476 INFO  Initiating shutdown.
+2024-06-29 18:42:40.481 INFO  Shutdown complete.
+2024-06-29 18:45:27.133 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.StorageEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:45:27.192 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:54:59.446 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.StorageEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:54:59.510 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:55:38.543 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.StorageEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:55:38.604 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.
+2024-06-29 18:59:37.552 INFO  Logging to 'D:\Coding\Research\programming-in-real-life\system-design\message-queue\NServiceBus\Restaurant.StorageEndpoint\bin\Debug\net8.0\' with level Info
+2024-06-29 18:59:37.612 INFO  No valid license could be found. Falling back to trial license with start date '2024-06-28'.

@@ -780,16 +780,23 @@
     {
       "Name": "NServiceBus.LearningSynchronizedStorage",
       "EnabledByDefault": false,
-      "Active": false,
-      "PrerequisiteStatus": null,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
       "Dependencies": [
         [
           "NServiceBus.Features.SynchronizedStorage"
         ]
       ],
       "Version": "9.0.2",
-      "StartupTasks": null,
-      "DependenciesAreMet": false
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
     },
     {
       "Name": "NServiceBus.SerializationFeature",
@@ -1020,16 +1027,23 @@
     {
       "Name": "NServiceBus.Features.LearningSagaPersistence",
       "EnabledByDefault": false,
-      "Active": false,
-      "PrerequisiteStatus": null,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
       "Dependencies": [
         [
           "NServiceBus.Features.Sagas"
         ]
       ],
       "Version": "9.0.2",
-      "StartupTasks": null,
-      "DependenciesAreMet": false
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
     },
     {
       "Name": "NServiceBus.Features.Outbox",
@@ -1177,11 +1191,11 @@
     {
       "Name": "NServiceBus.Features.Sagas",
       "EnabledByDefault": true,
-      "Active": false,
+      "Active": true,
       "PrerequisiteStatus": {
-        "IsSatisfied": false,
+        "IsSatisfied": true,
         "Reasons": [
-          "No sagas were found in the scanned types"
+          
         ]
       },
       "Dependencies": [
@@ -1190,7 +1204,9 @@
         ]
       ],
       "Version": "9.0.2",
-      "StartupTasks": null,
+      "StartupTasks": [
+        
+      ],
       "DependenciesAreMet": true
     },
     {
@@ -1236,7 +1252,7 @@
     "ProcessorCount": 12,
     "Is64BitProcess": true,
     "CLRVersion": "8.0.6",
-    "WorkingSet": 41607168,
+    "WorkingSet": 42487808,
     "SystemPageSize": 4096,
     "HostName": "RubberDuck",
     "UserName": "lpl21",
@@ -1260,10 +1276,17 @@
     "MessageConventions": [
       "NServiceBus Marker Interfaces"
     ],
-    "NumberOfMessagesFoundAtStartup": 1,
+    "NumberOfMessagesFoundAtStartup": 2,
     "Messages": [
-      "CookCommand"
+      "IngredientsPrepared",
+      "OrderPlaced"
     ]
+  },
+  "Persistence": {
+    "Sagas": {
+      "Type": "NServiceBus.LearningPersistence",
+      "Version": "9.0.2"
+    }
   },
   "Receiving": {
     "LocalQueueAddress": {
@@ -1282,8 +1305,11 @@
       
     ],
     "MessageHandlers": {
-      "CookCommand": [
-        "CookCommandHandler"
+      "OrderPlaced": [
+        "CookingPolicy"
+      ],
+      "IngredientsPrepared": [
+        "CookingPolicy"
       ]
     }
   },
