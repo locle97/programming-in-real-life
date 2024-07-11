@@ -107,6 +107,8 @@ Imagine your mansion hosts guests from all over the world. Each guest brings the
     - **Compatibility**: Allows guests to use electronic devices with different plug types.
     - **Flexibility**: Enables the integration of various electronic devices without modifying the outlets.
 
+![The Universal Plug Adapter](./images/universal-plug-adapter.jpg)
+
 ### 2. Bridge: The Central Control Panel
 Your mansion has multiple lighting systems, each from different manufacturers. Instead of managing each system separately, you install a central control panel (the Bridge) that standardizes the interface for all lighting systems. Now, you can control the lights from one place, regardless of their underlying implementation. This separates the abstraction (control panel) from the implementation (individual lighting systems).
 
@@ -121,6 +123,8 @@ Your mansion has multiple lighting systems, each from different manufacturers. I
 - Benefits:
     - **Simplified Management**: Controls all lighting systems from one place.
     - **Independence**: Allows changes in the lighting systems without affecting the control panel.
+
+![The Central control panel](./images/central-control-panel.jpg)
 
 ### 3. Composite: The Mansion's Cleaning Service
 Imagine you are the owner of the mansion and you need to keep it clean. Your mansion has different types of rooms: individual rooms, suites (which are collections of rooms), and entire floors (which can contain multiple suites and individual rooms). You hire a cleaning service to manage this task.
@@ -144,6 +148,8 @@ Imagine you are the owner of the mansion and you need to keep it clean. Your man
     - **Simplified Client Code**: The client code (you requesting the cleaning) doesn’t need to worry about whether it’s dealing with individual rooms or collections of rooms.
     - **Scalability**: You can easily add more rooms, suites, or floors without changing the client code.
 
+![The Mansion's cleaning service](./images/cleaning-services.jpg)
+
 ### 4. Decorator: The Festive Decorations
 During the holidays, you want to decorate your mansion. Instead of modifying the structure of the mansion, you add decorations like lights, wreaths, and ornaments (Decorators). These decorations enhance the mansion’s appearance without altering its fundamental structure, and you can mix and match different decorations as needed.
 
@@ -159,20 +165,25 @@ During the holidays, you want to decorate your mansion. Instead of modifying the
     - **Flexibility**: Allows adding or changing decorations without modifying the mansion.
     - **Reusability**: Decorations can be reused for different occasions.
 
-### 5. Facade: The Mansion Concierge
-Managing a mansion involves interacting with various service providers—cleaning, maintenance, security. Instead of dealing with each service directly, you hire a concierge (Facade) who handles all interactions on your behalf. The concierge provides a simplified interface to the complex subsystem of services, making your life easier.
+![The Festive Decorations](./images/decorations.jpg)
+
+### 5. Facade: The Mansion's Operations Department
+
+Imagine you have a mansion, and instead of managing all the services yourself, you set up an operations department. This department is responsible for handling all your requests by coordinating with various service providers like cleaning, maintenance, security, and catering.
 
 - Components:
-    - **Services**: Cleaning, maintenance, security, etc.
-    - **Concierge (Facade)**: Handles all interactions with the service providers.
+    - **Operations Department (Facade)**: The single point of contact for all your requests.
+    - **Services (Subsystems)**: Cleaning, maintenance, security, catering, etc.
 
-- How it Works: The concierge provides a unified interface to manage all service providers, simplifying interactions for the mansion owner.
+- How it Works: When you make a request to the operations department, they take care of everything by contacting the appropriate services. For example, if you request a party to be organized, the operations department will arrange for the caterers, decorators, security, and cleaning staff without you having to interact with each of these services individually.
 
-- Example: Instead of calling the cleaning, maintenance, and security services separately, you call the concierge, who coordinates and manages all the services for you.
+- Example: You want to host a grand dinner party. Instead of contacting the catering, cleaning, and security services separately, you simply inform the operations department. They coordinate all the necessary services to ensure the party is a success, providing a simplified interface for you to interact with.
 
 - Benefits:
-    - **Simplified Management**: Reduces the complexity of interacting with multiple services.
-    - **Loose Coupling**: Keeps the mansion owner decoupled from the service providers.
+    - **Simplified Management**: You have a single point of contact for all your needs.
+    - **Loose Coupling**: The operations department abstracts the complexities of dealing with multiple services.
+
+![The operations department](./images/operation-department.jpg)
 
 ### 6. Flyweight: The Guest Room Keys
 Your mansion often hosts large parties with numerous guests, and you have many identical guest rooms. Instead of creating a unique key for each guest room, you use a flyweight pattern by creating a limited number of key templates that share common features (intrinsic state) and only differ in room-specific details (extrinsic state). This saves resources while managing numerous guests.
@@ -189,7 +200,7 @@ Your mansion often hosts large parties with numerous guests, and you have many i
     - **Resource Efficiency**: Saves memory and resources by sharing common features.
     - **Scalability**: Manages a large number of guest rooms efficiently.
 
-### Proxy: The Security Guard
+### 7. Proxy: The Security Guard
 You value your privacy and don’t want everyone accessing your private study directly. You employ a security guard (Proxy) who checks the identity of anyone trying to enter the study. The guard can either grant or deny access, and sometimes even perform additional tasks like logging entry times. The guard controls access to the study without changing the study itself.
 
 - Components:
